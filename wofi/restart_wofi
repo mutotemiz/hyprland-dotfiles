@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if Wofi is already running
+if pgrep -x "wofi" > /dev/null; then
+    # Kill the running instance of Wofi
+    pkill -x "wofi"
+else
+    # Start a new instance of Wofi
+    wofi --show=drun
+fi
